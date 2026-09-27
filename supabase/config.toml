@@ -1,0 +1,2 @@
+[functions.notify-admin-lead]
+verify_jwt = false

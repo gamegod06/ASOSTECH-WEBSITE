@@ -1,0 +1,362 @@
+ASOSTECH ADMIN DASHBOARD — BOLT MASTER PROMPT
+
+You are working on an existing ASOSTECH React + Vite + TypeScript website that already has a Supabase-connected admin CMS. Do NOT rebuild the project from scratch and do NOT replace the existing Supabase backend. Upgrade/refine the existing admin dashboard while preserving all working functionality.
+
+IMPORTANT BRAND ASSET
+- Use the supplied ASOSTECH logo as the official logo everywhere on the public website and admin dashboard.
+- The supplied logo has a transparent background. Do NOT add a white rectangle, checkerboard background, colored box, gradient, or artificial background behind the logo.
+- Use the full ASOSTECH logo (icon + ASOS TECH wordmark) rather than replacing it with a text-only logo or a Lucide lightning icon.
+- Keep the logo sharp and proportional. Never stretch it.
+- In the sidebar, use a compact but clearly readable version.
+- On the admin login screen, use a larger version.
+- On the public website header/footer, use the same official logo.
+- Store the supplied transparent PNG in /public/asostech-logo.png and use that as the default fallback when Supabase site_settings.logo_url is empty.
+- If an administrator uploads a replacement logo through Settings, allow the Supabase logo_url to override the fallback.
+
+DESIGN DIRECTION
+Create a premium, professional operations dashboard for an electrical, security, CCTV/alarm, solar and smart-solutions company.
+
+Visual style:
+- Very dark near-black/forest-green background.
+- ASOSTECH green as the primary accent.
+- Deep navy/green secondary tones.
+- White/off-white primary text.
+- Muted sage-gray secondary text.
+- Thin subtle borders.
+- Modern Manrope typography, matching the existing website.
+- Minimal, premium, technical and corporate.
+- Slightly rounded cards, approximately 8–12px radius.
+- No excessive gradients.
+- No cartoonish graphics.
+- No generic purple SaaS theme.
+- No huge unnecessary illustrations.
+- Use Lucide icons consistently.
+- The dashboard should feel like a real business management console, not a template.
+
+LAYOUT
+Desktop:
+1. Fixed left sidebar around 230–250px wide.
+2. Sticky top navigation bar.
+3. Main content area with generous spacing.
+4. Responsive tablet/mobile navigation with a proper mobile menu.
+
+SIDEBAR
+Top:
+- ASOSTECH transparent logo.
+- Small label: ADMIN CONSOLE.
+
+Navigation groups:
+OVERVIEW
+- Dashboard
+
+OPERATIONS
+- Leads & Quotes
+- Projects
+- Services
+- Messages
+
+CONTENT
+- FAQs
+- Website Content
+- Media Library
+
+SYSTEM
+- Settings
+
+Bottom:
+- View Website
+- Admin Profile
+- Logout should remain available through the existing authentication/profile flow.
+
+The active navigation item should have a subtle ASOSTECH green background and green accent indicator.
+Leads & Quotes should display a small unread/new count when applicable.
+
+TOP BAR
+Include:
+- Breadcrumb: ASOSTECH > current page
+- Global search field with Ctrl/Cmd + K hint
+- Notification button with unread indicator
+- Help button
+- Logged-in administrator avatar/name
+- Existing Supabase authentication state must remain intact.
+
+DASHBOARD OVERVIEW
+Header:
+- Eyebrow showing current date.
+- Title: Dashboard
+- Subtitle: “Welcome back. Here’s what’s happening with ASOSTECH.”
+- Date range controls: Today / 7 Days / 30 Days / 90 Days / Custom.
+
+KPI CARDS
+Create four polished cards:
+1. New Leads
+   Example: 24
+   Example change: +18.2%
+2. Pending Quotes
+   Example: 8
+   Example change: +6.4%
+3. Active Projects
+   Example: 12
+   Supporting text: 3 due this month
+4. Published Services
+   Example: 4
+   Supporting action: Manage services
+
+Cards must be visually consistent, clickable where appropriate, and use clear icons.
+
+MAIN ANALYTICS
+Create a two-column area.
+
+LEFT: Quote Requests Performance
+- Heading: Quote Requests
+- Show total requests.
+- Show percentage change.
+- Line/area chart.
+- Chart should have subtle grid lines.
+- Use ASOSTECH green for the main series.
+- Use a secondary blue line for quoted requests.
+- Include small range controls: 7D / 30D / 90D / 1Y.
+- Chart must be responsive.
+- Do not use fake-looking 3D charts.
+
+RIGHT: Requests by Service
+Use a clean donut chart or equivalent visualization.
+Categories:
+- CCTV & Alarm
+- Solar & Inverter
+- Electrical
+- Security
+
+Show percentage/value beside each category.
+
+RECENT QUOTE REQUESTS
+Create a polished data table.
+Columns:
+- Client
+- Service
+- Location
+- Status
+- Received
+- Action
+
+Example rows:
+- John Adeyemi — CCTV & Alarm — Lekki — New — 4 min ago
+- Sarah Williams — Solar & Inverter — Ikoyi — Reviewing — 32 min ago
+- Michael Okoro — Electrical — Victoria Island — Contacted — 2 hrs ago
+- David Adebayo — Security — Ikeja — Quoted — 3 hrs ago
+
+Use status badges with different subtle tones.
+Rows should be clickable and connect to the existing lead detail flow.
+
+RECENT ACTIVITY
+Create a timeline/activity panel containing:
+- New quote request
+- Project updated
+- Service published
+- FAQ updated
+
+Each item should show icon, title, description and relative time.
+
+QUICK ACTIONS
+Add a bottom action row:
+- Add Project
+- Review New Leads
+- Export Monthly Report
+
+These must connect to real existing dashboard actions where possible. Do not create dead buttons.
+
+LEADS & QUOTES PAGE
+Improve the existing page visually without breaking functionality.
+Features:
+- Search
+- Filter by status
+- Filter by service
+- Filter by priority
+- Sort by date
+- Clear status badges
+- Lead detail view
+- Contact/action controls
+- Quote status workflow
+
+Statuses:
+New
+Reviewing
+Contacted
+Quoted
+Completed
+Archived
+
+PROJECTS PAGE
+Keep the existing Supabase project management functionality.
+Add a premium table/card interface with:
+- Project image
+- Title
+- Category
+- Location
+- Status
+- Sort order
+- Last updated
+- Edit
+- Publish/unpublish
+
+Project editor must continue supporting image uploads to Supabase storage.
+
+SERVICES PAGE
+Keep the existing service CRUD functionality.
+Display:
+- Service number
+- Service name
+- Category
+- Published/Draft status
+- Sort order
+- Updated date
+- Edit
+- Publish/unpublish
+
+Existing ASOSTECH services:
+1. Electrical Installation & Repairs
+2. Home & Office Security Systems
+3. CCTV & Alarm System Installation
+4. Solar Inverter Installation
+
+MESSAGES PAGE
+Keep the existing Supabase-connected messaging/inquiry functionality.
+Use a professional inbox layout:
+- Message list on the left
+- Message detail on the right on desktop
+- Search/filter
+- Read/unread states
+- Clear timestamps
+
+FAQS PAGE
+Keep existing CRUD functionality.
+Make the table/editor clean and professional.
+Allow:
+- Category
+- Question
+- Answer
+- Draft/Published
+- Sort order
+
+WEBSITE CONTENT
+Keep the existing Supabase website_content functionality.
+Create a clear CMS interface with grouped sections rather than exposing raw database fields.
+
+MEDIA LIBRARY
+Keep the existing Supabase storage functionality.
+Use a professional media grid/list.
+Show:
+- Thumbnail
+- Filename
+- File type
+- Upload date
+- Copy URL
+- Delete
+
+SETTINGS
+Keep existing settings and Supabase authentication.
+Sections:
+- General
+- Profile
+- Company Logo
+- Notifications
+
+Company logo section must show the ASOSTECH transparent logo correctly without a white/checkerboard background.
+
+AUTHENTICATION
+DO NOT remove or bypass the existing Supabase authentication.
+Admin access must continue to require the existing admin role check.
+Keep:
+- Email/password sign in
+- Forgot password
+- Secure session handling
+- Admin role validation
+- Logout
+
+LOGIN SCREEN
+Redesign the login screen to match the premium ASOSTECH identity.
+Left side:
+- Large transparent ASOSTECH logo
+- “OPERATIONS CONSOLE” eyebrow
+- “SMARTER SYSTEMS. SAFER SPACES.” heading
+- Short description
+- Professional ASOSTECH project image
+
+Right side:
+- Sign in to console
+- Email
+- Password
+- Show/hide password
+- Forgot password
+- Sign in button
+
+Do not use a fake authentication system.
+
+RESPONSIVE BEHAVIOR
+Desktop must be the primary polished experience.
+Tablet:
+- Sidebar can collapse.
+- Tables remain usable with horizontal scrolling where necessary.
+Mobile:
+- Sidebar becomes a drawer.
+- Topbar simplifies.
+- Cards become one/two columns.
+- Tables become horizontally scrollable or transform into stacked cards.
+- Charts resize correctly.
+
+IMPORTANT TECHNICAL RULES
+- Preserve React + Vite + TypeScript.
+- Preserve the existing Supabase client and database structure.
+- Do not replace Supabase with Bolt Database.
+- Do not introduce Firebase, MongoDB, or another backend.
+- Do not remove existing working CRUD operations.
+- Do not hard-code dashboard data if real Supabase data already exists for that metric.
+- Where the database does not yet contain an analytics field, use the existing available data and calculate the metric in the frontend.
+- Do not invent new environment variable names unless absolutely necessary.
+- Preserve existing .env / Supabase conventions.
+- Keep the project deployable to Vercel.
+- Avoid unnecessary dependencies.
+- Reuse existing components and styles where practical.
+- Keep the current public website functionality intact.
+- Do not break existing routes.
+- Do not remove the existing admin pages.
+- Do not replace the existing data model unless a change is genuinely required.
+
+LOGO IMPLEMENTATION REQUIREMENT
+The logo file must be referenced as:
+/public/asostech-logo.png
+
+Default fallback:
+/asostech-logo.png
+
+If Supabase site_settings.logo_url exists, it may override the fallback. Otherwise always show /asostech-logo.png.
+
+CSS REQUIREMENTS FOR LOGO
+- object-fit: contain
+- object-position: left center where appropriate
+- transparent background
+- no white wrapper
+- no background-color behind the logo itself
+- preserve aspect ratio
+- do not crop the logo
+
+FINAL QUALITY CHECK
+Before finishing:
+1. Confirm the public website shows the supplied ASOSTECH logo.
+2. Confirm the admin sidebar shows the same logo.
+3. Confirm the admin login screen shows the same logo.
+4. Confirm there is no white/checkerboard background behind the logo.
+5. Confirm Supabase authentication still works.
+6. Confirm Leads & Quotes still work.
+7. Confirm Projects CRUD still works.
+8. Confirm Services CRUD still works.
+9. Confirm FAQs CRUD still works.
+10. Confirm Website Content still works.
+11. Confirm Media Library still works.
+12. Confirm Settings and logo upload still work.
+13. Confirm the dashboard is responsive.
+14. Run the production build and fix all TypeScript/build errors before declaring the work complete.
+15. Do not leave placeholder buttons or unfinished sections.
+
+MOST IMPORTANT:
+This is an upgrade of an existing ASOSTECH website/admin CMS. Preserve the existing functionality and Supabase integration. Focus on making the admin interface look premium, professional, coherent and production-ready while using the supplied ASOSTECH transparent logo as the official brand mark.
